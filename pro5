@@ -1,0 +1,4 @@
+Jenkins uses port 8080, type “loacalhost:8080” in any browser of the machine and search. It will display following page, here use Administrator password to get start with Jenkins. 
+Install plugins by choosing relevant option, lets go with suggested plugins
+Plugins installation in progress 
+verify the Jenkins URL and click on “Save and Finish”. 
