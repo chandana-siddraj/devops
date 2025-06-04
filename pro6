@@ -1,0 +1,41 @@
+the “Manage Jenkins” window click on “Plugins” 
+new item- projrct name-
+general- give descp
+treggers-git hub hok trigger
+piplinr script-hellow world scrit
+pipline syntax apply and save
+go back
+chage to git
+put repository
+chage master to main
+generate pipline script
+
+
+https://github.com/chandana-siddraj/maven-project_1.git
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('SCM') {
+            steps{
+                echo'hello world'
+            }
+        }
+    }
+}
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('SCM') {
+            steps {
+             git branch: 'main', url: 'https://github.com/chandana-siddraj/maven-project_1.git'
+          
+            }
+        }
+    }
+}
