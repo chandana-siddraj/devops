@@ -1,0 +1,40 @@
+sudo apt update
+sudo apt install -y open jdk-17-jdk
+sudo apt instal -ymaven ansible git 
+
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add 
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+sudo apt update
+sudo apt install -y jenkins
+set up jenkins
+new item
+name freestyle project
+description
+(source code)put git mave link
+change master to main 
+(build steps) invoke top level 
+maven targer (goals)
+clean package - save and apply -build now
+click on number -console op-select lik
+
+sudo server jenkins start
+mkdir n/zenkins-deployment
+cd ~/jenkins-deployment
+nano hosts.init
+[local code]
+nano deploy.yml
+
+---
+- name: Deploy Jenkins Artifact
+  hosts: local
+  become: true
+  tasks:
+    - name: Copy .jar file to /opt
+      copy:
+        src: /mnt/c
+        dest: /opt/myapp.jar
+
+pwd
+ansible-playbook
+        
