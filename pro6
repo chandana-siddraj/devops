@@ -33,6 +33,23 @@ pipeline {
     stages {
         stage('SCM') {
             steps {
+              git branch: 'main', url: 'https://github.com/BhavanaTP/maven-project.git'
+            }
+        }
+        stage('BUILD .WAR'){
+            steps{
+                bat '"C:\\Program Files\\tools\\apache-maven-3.9.9\\bin\\mvn" clean install'
+            }
+        }
+    }
+}
+
+pipeline {
+    agent any
+
+    stages {
+        stage('SCM') {
+            steps {
              git branch: 'main', url: 'https://github.com/chandana-siddraj/maven-project_1.git'
           
             }
