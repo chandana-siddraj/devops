@@ -1,0 +1,60 @@
+new project -> program name -> maven -> create 
+put dependencies above properties
+put build after </project>
+
+<version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.9.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <properties>
+
+
+</properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.example.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
+
+
+
+mvn compile  enter
+mvn clean  enter
+mvn package  enter   idu admele check madu target file create agidya antha mele
+dir   enter
+cd.target   enter
+java -jar (frst 3 words of program and press tab key on keyboard)   enter
+
+
+maven-compiler-plugin: Compiles Java code.
+maven-surefire-plugin: Runs unit tests.
+maven-jar-plugin: Packages the project as a JAR file.
+maven-clean-plugin: Cleans up the target/ directory.
