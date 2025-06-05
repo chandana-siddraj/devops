@@ -1,0 +1,19 @@
+after test 
+application {
+    mainClass = 'org.example.Main'  // Specify the main class
+}
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'org.example.Main' // Specify the main class here as well
+        )
+    }
+}
+ 
+in command promt
+gradle clean
+gradle run
+gradle build
+cd build
+cd libs
+java -jar (frst 3 letters) tab key
