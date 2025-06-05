@@ -1,0 +1,34 @@
+
+You will be getting a default pom.xm l and main.java file
+After that create a git repo with the same name as of your project name
+Create the repo click on the Create repository
+
+git init	--to initialize the git git add . -- add all files to the git git commit -m “first commit”	-- to commit the added files git branch -M main	-- to switchto branch main
+git config --global user.name “username”	-- to configure your git account using
+git config --global user.email “email-id”
+ssh-keygen -t rsa -b 4096 -C <email-id>	--to generate the ssh key
+cat ~/.ssh/id_rsa.pub
+
+1.	Now go to the SSH and GPG section in the GitHub settings option.
+2.	Click on the New SSH key button.
+Choose a suitable name and paste the SSH key into the provided space.
+3.	Now get back to the IDE’s terminal and type the following command
+4.	git remote set-url origin <ur.git repo url>
+5.	git remote -v
+6.	git push --set-upstream origin main
+7.	git push
+
+Open the azure devops and click on the create project, provide the project name
+You will be logged in to the project
+Click on the pipelines
+Choose github YAML file
+Then you will be prompted to your repo in the github, choose the necessary git repo
+Click on approve and install
+Choose the azure account
+Choos ethe build system as maven
+Then it will create the azurepipeline.yaml file automatically
+Then Save and run the pipeline,
+Create a commit message and press the run button again.
+Click on the created Job from the Jobs table.
+Then it will take a minute to build the pipeline,
+
