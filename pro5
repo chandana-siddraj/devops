@@ -2,3 +2,4 @@ Jenkins uses port 8080, type “loacalhost:8080” in any browser of the machine
 Install plugins by choosing relevant option, lets go with suggested plugins
 Plugins installation in progress 
 verify the Jenkins URL and click on “Save and Finish”. 
+java -jar path of war
