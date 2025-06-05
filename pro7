@@ -1,0 +1,32 @@
+[local]
+localhost ansible_connection=local
+
+
+- name: Install and Start NGINX
+  hosts: local
+  become: true
+  tasks:
+    - name: Install NGINX
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Start and Enable NGINX
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+        wsl --install
+        sudo apt update
+        sudo apt install ansible -y
+        ansible --version
+        mkdir ansible-lab
+        cd ansible-lab
+        nano hosts
+
+        ansible -i hosts local -m ping
+        nano install_nginx.yml
+        curl http://localhost
+        
